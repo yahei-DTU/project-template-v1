@@ -16,6 +16,14 @@ Start by creating an empty (no license, no README) repository either using the G
 ```bash
 gh repo create <repo_name> --public --confirm
 ```
+Before proceeding, verify that `uv` is installed:
+
+```bash
+uv --version
+```
+
+If not installed, follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
 Afterwards on your local machine run
 
 ```bash
