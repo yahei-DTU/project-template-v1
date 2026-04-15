@@ -7,10 +7,10 @@ name = {{ cookiecutter.project_name|tojson }}
 version = "0.0.1"
 description = {{ cookiecutter.description|tojson }}
 authors = [
-  { name = {{ cookiecutter.author_name|tojson }}, email = "your@email.com" },
+  { name = {{ cookiecutter.author_name|tojson }}, email = {{ cookiecutter.author_email|tojson }} },
 ]
 {% if cookiecutter.open_source_license != 'No license file' %}license = { file = "LICENSE" }{% endif %}
-keywords = ["machine learning", "MLOps"]
+keywords = [{% for kw in cookiecutter.keywords.split(',') %}{{ kw.strip()|tojson }}{% if not loop.last %}, {% endif %}{% endfor %}]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3",
@@ -18,22 +18,24 @@ classifiers = [
 readme = "README.md"
 requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = [
-    "fastapi==0.115.6",
-    "torch==2.6.0",
-    "typer==0.15.1",
-    "uvicorn==0.34.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.1",
+    "pandas>=2.3.3",
 ]
 
 [dependency-groups]
 dev = [
     "coverage==7.6.9",
     "invoke==2.2.0",
-    "pre-commit==4.1.0",
-    "pytest==8.3.4",
-    "ruff==0.1.3",
-    "mypy==1.19.1",
+    "pre-commit==4.5.1",
+    "pytest==9.0.2",
+    "ruff==0.14.11",
+    "mkdocs==1.6.1",
     "mkdocs-material==9.7.1",
-    "mkdocstrings-python==2.0.1",
+    "mkdocstrings-python==2.0.2",
+    "fastapi>=0.135.3",
+    "hydra-core>=1.3.2",
+    "uvicorn[standard]>=0.44.0",
 ]
 
 

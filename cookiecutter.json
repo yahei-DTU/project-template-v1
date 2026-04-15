@@ -1,11 +1,10 @@
 {
   "repo_name": "repo_name",
   "project_name": "project_name",
-  "project_structure": ["advance", "simple"],
-  "deps_manager": ["uv", "pip"],
-  "add_coding_agent_support": [true, false],
   "author_name": "Your name (or your organization/company/team)",
+  "author_email": "Your email address",
   "description": "A short description of the project.",
+  "keywords": "comma-separated, list, of, keywords",
   "python_version": "3.12",
   "open_source_license": ["No license file", "MIT", "BSD-3-Clause"],
   "_copy_without_render": [

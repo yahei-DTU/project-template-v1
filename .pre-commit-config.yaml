@@ -3,7 +3,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
@@ -11,6 +11,9 @@ repos:
       - id: check-executables-have-shebangs
       - id: check-case-conflict
       - id: detect-private-key
+      - id: check-yaml
+      - id: check-added-large-files
+
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1

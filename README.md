@@ -1,13 +1,12 @@
-# 🍪 A up-to-date Cookiecutter template for MLOps
+# 🍪 My personal project template
 
-Inspired by the original [cookiecutter-data-science](https://cookiecutter-data-science.drivendata.org/v1/) template.
-This template is more opinionated regarding tools used. It has been updated to better fit machine learning-based
-projects and is being used as the core template in this [MLOps course](https://github.com/SkafteNicki/dtu_mlops).
+It is a slight adaption from this [MLOps template](https://github.com/SkafteNicki/mlops_template).
 
 ## ✋ Requirements to use the template:
 
 * Python 3.11 or higher
 * [cookiecutter](https://github.com/cookiecutter/cookiecutter) version 2.4.0 or higher
+* Using `uv` as deps-manager
 
 ## 🆕 Start a new project
 
@@ -28,16 +27,10 @@ You will be prompted with the following questions:
 ```txt
     [1/8] repo_name (repo_name):
     [2/8] project_name (project_name):
-    [3/8] Select project_structure
-        1 - advance
-        2 - simple
-        Choose from [1/2] (1):
-    [4/8] Select deps_manager
-        1 - pip
-        2 - uv
-        Choose from [1/2] (1):
-    [5/8] author_name (Your name (or your organization/company/team)):
-    [6/8] description (A short description of the project.):
+    [3/8] author_name (Your name (or your organization/company/team)):
+    [4/8] author_email: (Your email address):
+    [5/8] description (A short description of the project.):
+    [6/8] keywords: (comma-separated, list, of, keywords):
     [7/8] python_version (3.12):
     [8/8] Select open_source_license
         1 - No license file
@@ -56,10 +49,6 @@ Where you should input starting values for the project. A couple of notes regard
     should be all lowercase and only contain letters, numbers and underscores. The project name will be used as the name
     of the Python package. This will automatically be validated by the template.
 
-3. When asked for the `project_structure` you can choose between `advance` and `simple`. The `advance` structure
-    contains everything in the `simple` structure but also includes starting `dockerfiles`, `docs`, `github actions`,
-    `dependabot` and more.
-
 To commit to the remote repository afterwards execute the following series of commands:
 
 ```bash
@@ -73,15 +62,36 @@ git push origin master
 
 ## 🗃️ Repository structure
 
-Assuming you choose the `advance` structure and `uv` as the dependency manager, the repository will look like
+The repository will look like
 something like this:
 
 ```txt
-├── configs
-│   └── .gitkeep
 ├── .devcontainer
 │   ├── devcontainer.json
-│   └── postCreateCommand.sh
+│   └── post_create.sh
+├── .env
+├── .github
+│   ├── dependabot.yaml
+│   └── workflows
+│       ├── data-tests.yaml
+│       ├── deploy_docs.yaml
+│       ├── linting.yaml
+│       ├── pre-commit-update.yaml
+│       └── tests.yaml
+├── .gitignore
+├── .pre-commit-config.yaml
+├── .python-version
+├── AGENTS.md
+├── configs
+│   ├── config_dev.yaml
+│   ├── config_prod.yaml
+│   ├── config_test.yaml
+│   ├── datasets
+│   │   └── data.yaml
+│   ├── experiments
+│   │   └── exp.yaml
+│   └── models
+│       └── model.yaml
 ├── dockerfiles
 │   ├── api.dockerfile
 │   └── train.dockerfile
@@ -90,42 +100,36 @@ something like this:
 │   ├── README.md
 │   └── source
 │       └── index.md
-├── .github
-│   ├── dependabot.yaml
-│   └── workflows
-│       ├── linting.yaml
-│       ├── pre-commit-update.yaml
-│       └── tests.yaml
-├── .gitignore
 ├── LICENSE
 ├── models
 │   └── .gitkeep
 ├── notebooks
 │   └── .gitkeep
-├── .pre-commit-config.yaml
 ├── pyproject.toml
-├── .python-version
 ├── README.md
 ├── reports
 │   ├── figures
 │   │   └── .gitkeep
 │   └── .gitkeep
+├── requirements.txt
+├── requirements_dev.txt
 ├── src
 │   └── project_name
+│       ├── __init__.py
 │       ├── api.py
 │       ├── data.py
 │       ├── evaluate.py
-│       ├── __init__.py
 │       ├── model.py
 │       ├── train.py
+│       ├── utils
+│       │   └── __init__.py
 │       └── visualize.py
 ├── tasks.py
-├── tests
-│   ├── __init__.py
-│   ├── test_api.py
-│   ├── test_data.py
-│   └── test_model.py
-└── uv.lock
+└── tests
+    ├── __init__.py
+    ├── test_api.py
+    ├── test_data.py
+    └── test_model.py
 ```
 
 In particular lets explain the structure of the `src` folder as that is arguably the most important part of the
@@ -183,19 +187,3 @@ src/
 🤖 Automated dependency updates with [Dependabot](https://github.com/dependabot)
 
 📝 Project tasks using [Invoke](https://www.pyinvoke.org/)
-
-and probably more that I have forgotten...
-
-## ❕ License
-
-If you enjoy using the template, please consider giving credit by citing it.
-You can use the following BibTeX entry:
-
-```bibtex
-@misc{skafte_mlops_template,
-    author       = {Nicki Skafte Detlefsen},
-    title        = {MLOps template},
-    howpublished = {\url{https://github.com/SkafteNicki/mlops_template}},
-    year         = {2025}
-}
-```
