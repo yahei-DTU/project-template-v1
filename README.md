@@ -19,7 +19,8 @@ gh repo create <repo_name> --public --confirm
 Afterwards on your local machine run
 
 ```bash
-cookiecutter https://github.com/SkafteNicki/mlops_template
+cookiecutter https://github.com/yahei-DTU/project-template-v1
+
 ```
 
 You will be prompted with the following questions:
