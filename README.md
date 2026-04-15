@@ -1,6 +1,6 @@
 # 🍪 My personal project template
 
-It is a slight adaption from this [MLOps template](https://github.com/SkafteNicki/mlops_template).
+It is adapted from [MLOps template](https://github.com/SkafteNicki/mlops_template).
 
 ## ✋ Requirements to use the template:
 
