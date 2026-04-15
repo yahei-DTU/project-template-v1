@@ -24,6 +24,18 @@ uv --version
 
 If not installed, follow the [uv installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
+Then verify that `cookiecutter` is installed:
+
+```bash
+cookiecutter --version
+```
+
+If not installed, run:
+
+```bash
+uv tool install cookiecutter
+```
+
 Afterwards on your local machine run
 
 ```bash
