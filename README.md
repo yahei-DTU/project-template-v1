@@ -10,7 +10,7 @@ It is adapted from [MLOps template](https://github.com/SkafteNicki/mlops_templat
 
 ## 🆕 Start a new project
 
-Start by creating a repository either using the GitHub GUI in the web browser or alternatively you can use the
+Start by creating an empty (no license, no README) repository either using the GitHub GUI in the web browser or alternatively you can use the
 [GitHub command line interface](https://cli.github.com/) if you have set it up:
 
 ```bash
