@@ -189,23 +189,3 @@ src/
     │   └── model2.py
     ├── ...
 ```
-
-## 📚 The stack
-
-🐍 Python projects using `pyproject.toml`
-
-🔥 Models in [Pytorch](https://pytorch.org/)
-
-📦 Containerized using [Docker](https://www.docker.com/)
-
-📄 Documentation with [Material Mkdocs](https://squidfunk.github.io/mkdocs-material/)
-
-👕 Linting and formatting with [ruff](https://docs.astral.sh/ruff/)
-
-✅ Checking using [pre-commit](https://pre-commit.com/)
-
-🛠️ CI with [GitHub Actions](https://github.com/features/actions)
-
-🤖 Automated dependency updates with [Dependabot](https://github.com/dependabot)
-
-📝 Project tasks using [Invoke](https://www.pyinvoke.org/)
