@@ -78,7 +78,7 @@ git init
 git add .
 git commit -m "init cookiecutter project"
 git remote add origin https://github.com/<username>/<repo_name>
-git push origin master
+git push origin main
 ```
 
 ## 🗃️ Repository structure
