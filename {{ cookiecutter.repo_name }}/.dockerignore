@@ -1,0 +1,87 @@
+# Git
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+wheels/
+sdist/
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+__pypackages__/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+nosetests.xml
+
+# Type checkers & linters
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+.ruff_cache/
+
+# Jupyter
+notebooks/
+.ipynb_checkpoints/
+
+# Docs
+docs/
+*.md
+
+# CI/CD
+.github/
+
+# Dev tooling
+.devcontainer/
+.pre-commit-config.yaml
+.vscode/
+.idea/
+
+# Environment & secrets
+.env
+*.env.*
+
+# Data, models & reports (typically large or generated)
+data/
+models/
+reports/
+
+# Config overrides (keep only what's needed at runtime)
+configs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.swp
+*.swo
+tmp/
+temp/

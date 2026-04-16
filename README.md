@@ -90,6 +90,7 @@ something like this:
 ├── .devcontainer
 │   ├── devcontainer.json
 │   └── post_create.sh
+├── .dockerignore
 ├── .env
 ├── .github
 │   ├── dependabot.yaml

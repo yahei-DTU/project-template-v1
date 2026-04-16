@@ -56,6 +56,7 @@ The directory structure of the project looks like this:
 │   ├── test_api.py
 │   ├── test_data.py
 │   └── test_model.py
+├── .dockerignore
 ├── .env
 ├── .gitignore
 ├── .pre-commit-config.yaml
